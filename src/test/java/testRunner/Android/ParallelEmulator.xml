@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="org.Listener.ExtentITestListenerClassAdapter"/>
+    </listeners>
+
+    <test name="Pixel">
+        <parameter name="platform" value="Android"/>
+        <parameter name="deviceType" value="AndroidEmulator"/>
+        <parameter name="noReset" value="true"/>
+        <parameter name="platformVersion" value="13.0"/>
+        <parameter name="appPackage" value="tr.xyz.app"/>
+        <parameter name="appActivity" value="tr.com.xyz.app.ui.SplashActivity"/>
+        <parameter name="appWaitForLaunch" value="false"/>
+        <parameter name="pushPermission" value="true"/>
+        <parameter name="enableMultiWindows" value="true"/>
+        <parameter name="allowInvisibleElements" value="true"/>
+        <parameter name="url" value="http://127.0.0.1:4725"/>
+        <parameter name="port" value="4725"/>
+        <parameter name="app" value=""/>
+        <parameter name="udid" value="emulator-5556"/>
+        <parameter name="bundleId" value="com.xyz.test"/>
+        <parameter name="deleteApp" value=""/>
+        <parameter name="appId" value="tr.com.xyz.app"/>
+
+        <classes>
+            <class name="org.Steps.Android.HomePageSteps"/>
+        </classes>
+    </test>
+
+    <test name="Fold">
+        <parameter name="platform" value="Android"/>
+        <parameter name="deviceType" value="AndroidEmulator"/>
+        <parameter name="noReset" value="true"/>
+        <parameter name="platformVersion" value="12.0"/>
+        <parameter name="appPackage" value="tr.xyz.app"/>
+        <parameter name="appActivity" value="tr.com.xyz.app.ui.SplashActivity"/>
+        <parameter name="appWaitForLaunch" value="false"/>
+        <parameter name="pushPermission" value="true"/>
+        <parameter name="enableMultiWindows" value="true"/>
+        <parameter name="allowInvisibleElements" value="true"/>
+        <parameter name="url" value="http://127.0.0.1:4723"/>
+        <parameter name="port" value="4723"/>
+        <parameter name="app" value=""/>
+        <parameter name="udid" value="emulator-5554"/>
+        <parameter name="bundleId" value="com.xyz.test"/>
+        <parameter name="deleteApp" value=""/>
+        <parameter name="appId" value="tr.com.xyz.app"/>
+
+        <classes>
+            <class name="org.Steps.Android.HomePageSteps">
+            </class>
+        </classes>
+    </test>
+</suite>
